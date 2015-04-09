@@ -69,15 +69,6 @@
      <Compile Include="Assets\SampleAssets\Effects\ImageEffects (Pro Only)\Editor\Water (Pro Only)\WaterEditorUtility.cs" />
      <Compile Include="Assets\SampleAssets\Effects\LightShafts\Editor\LightShaftsEditor.cs" />
      <Compile Include="Assets\SampleAssets\Vehicles\Car\Scripts\Editor\WheelEditor.cs" />
-     <Compile Include="Assets\UPAToolkit\Editor\EditorGUI\UPAEditorWindow.cs" />
-     <Compile Include="Assets\UPAToolkit\Editor\EditorGUI\UPAExportWindow.cs" />
-     <Compile Include="Assets\UPAToolkit\Editor\EditorGUI\UPAImageCreationWindow.cs" />
-     <Compile Include="Assets\UPAToolkit\Editor\EditorGUI\UPAImageEditorPreview.cs" />
-     <Compile Include="Assets\UPAToolkit\Editor\UPACustomTypes.cs" />
-     <Compile Include="Assets\UPAToolkit\Editor\UPADrawer.cs" />
-     <Compile Include="Assets\UPAToolkit\Editor\UPAImage.cs" />
-     <Compile Include="Assets\UPAToolkit\Editor\UPALayer.cs" />
-     <Compile Include="Assets\UPAToolkit\Editor\UPASession.cs" />
      <None Include="Assets\Animated Emission Shaders\Shader\Animated\Emission\Compiled-Emission.shader" />
      <None Include="Assets\SampleAssets\Effects\Projectors\ProjectorGuidelines.txt" />
      <None Include="Assets\SampleAssets\Effects\GlassRefraction (Pro Only)\Shaders\GlassStainedBumpDistort.shader" />

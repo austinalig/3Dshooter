@@ -22,5 +22,8 @@ function Update()
 
 	transform.LookAt(Vector3(target.position.x, transform.position.y, target.position.x));
 	myTransform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+	if(gameObject.name == "Bullet(Clone)"){
+         Destroy(gameObject, 5);
+     }
 
 }

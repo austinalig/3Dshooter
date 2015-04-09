@@ -47,11 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AIFollow.js" />
-     <Compile Include="Assets\Animated Emission Shaders\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
-     <Compile Include="Assets\Animated Emission Shaders\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
-     <Compile Include="Assets\Animated Emission Shaders\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
-     <Compile Include="Assets\Animated Emission Shaders\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
-     <Compile Include="Assets\Animated Emission Shaders\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
      <Compile Include="Assets\Shooting.js" />
      <None Include="Assets\Animated Emission Shaders\Shader\Animated\Emission\Compiled-Emission.shader" />
      <None Include="Assets\SampleAssets\Effects\Projectors\ProjectorGuidelines.txt" />
