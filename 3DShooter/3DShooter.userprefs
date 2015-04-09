@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AIFollow.js">
     <Files>
-      <File FileName="Assets\Shooting.js" Line="8" Column="71" />
-      <File FileName="Assets\Shoot.cs" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="19" Column="1" />
-      <File FileName="Assets\FreegunMove.cs" Line="6" Column="2" />
+      <File FileName="Assets\AIFollow.js" Line="4" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
