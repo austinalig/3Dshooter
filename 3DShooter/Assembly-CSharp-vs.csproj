@@ -48,9 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\DestroyBullet.cs" />
      <Compile Include="Assets\DestroyShell.cs" />
-     <Compile Include="Assets\EnemyAI.cs" />
-     <Compile Include="Assets\EnemyHealth.cs" />
-     <Compile Include="Assets\EnemyMovement.cs" />
      <Compile Include="Assets\FreegunMove.cs" />
      <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\ControlGUIScript.cs" />

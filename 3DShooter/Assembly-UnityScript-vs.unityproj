@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AIFollow.js" />
      <Compile Include="Assets\Shooting.js" />
      <None Include="Assets\Animated Emission Shaders\Shader\Animated\Emission\Compiled-Emission.shader" />
      <None Include="Assets\SampleAssets\Effects\Projectors\ProjectorGuidelines.txt" />
