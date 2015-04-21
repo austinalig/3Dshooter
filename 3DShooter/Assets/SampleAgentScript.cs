@@ -8,6 +8,7 @@ public class SampleAgentScript : MonoBehaviour {
 	public int health = 5;
 	private int currenthealth;
 	public GameObject bullet;
+	public int scoreValue = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -24,8 +25,12 @@ public class SampleAgentScript : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == bullet.tag) {
 			currenthealth = currenthealth - 1;
-			if (currenthealth <= 0)
+			if (currenthealth <= 0){
+
+				ScoreManager.score += scoreValue;
 				Destroy (gameObject);
+
+			}
 		} else
 			Debug.Log (other.tag);
 	}
