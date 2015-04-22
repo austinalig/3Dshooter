@@ -3,11 +3,19 @@ using System.Collections;
 
 public class enemyshoot : MonoBehaviour {
 	public Rigidbody projectile;
-	public int speed = 10;
-	public float fireRate = 0.5F;
+	public int speed = 1000000;
+	public float fireRate = 0.8F;
 	private float nextFire = 0.0F;
-	void onTriggerEnter(Collider other){
-		if ((other.name != "Bob") && Time.time > nextFire) {
+	SampleAgentScript script;
+	GameObject go;
+
+	void Start () {
+	}
+
+	void Update(){
+		GameObject go = GameObject.Find ("Enemy");
+		SampleAgentScript script = go.GetComponent<SampleAgentScript> ();
+		if ((script.fire == true) && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
 			Rigidbody clone = Instantiate(projectile, transform.position, transform.rotation)as Rigidbody;
 			if(clone != null){
