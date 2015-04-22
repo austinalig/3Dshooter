@@ -1703,6 +1703,7 @@ GameObject:
   - 224: {fileID: 274060645}
   - 222: {fileID: 274060647}
   - 114: {fileID: 274060646}
+  - 114: {fileID: 274060648}
   m_Layer: 5
   m_Name: Level
   m_TagString: Untagged
@@ -1752,13 +1753,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level:'
+  m_Text: 'Level: 1
+
+'
 --- !u!222 &274060647
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 274060644}
+--- !u!114 &274060648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 274060644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f770bc5e3624a14989b8abea664ce2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &277531269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,7 +2663,7 @@ Transform:
   m_Children:
   - {fileID: 304477541}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!82 &385787137
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5573,7 +5587,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 19518696, guid: 2d082edb9e59a1b4581ff3696a6a7bfb, type: 2}
       propertyPath: m_Speed
-      value: 12.5
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2d082edb9e59a1b4581ff3696a6a7bfb, type: 2}

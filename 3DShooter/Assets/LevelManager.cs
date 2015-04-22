@@ -2,24 +2,24 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class ScoreManager : MonoBehaviour {
-
-	public static int score;
-
+public class LevelManager : MonoBehaviour {
+	
+	public static int level;
+	
 	Text text;
-
+	
 
 	void Awake () {
-	
+		
 		text = GetComponent <Text>();
-		score = 0;
-
+		level = 1;
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		text.text = "Score: " + score;
-	
+		
+		text.text = "Level: " + level;
+		
 	}
 }

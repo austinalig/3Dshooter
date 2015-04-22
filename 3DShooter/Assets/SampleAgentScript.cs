@@ -9,10 +9,11 @@ public class SampleAgentScript : MonoBehaviour {
 	private int currenthealth;
 	public GameObject bullet;
 	public int scoreValue = 10;
+	public int levelValue = 2500;
 
 	// Use this for initialization
 	void Start () {
-		currenthealth = health;
+		currenthealth = health + LevelManager.level;
 		agent = GetComponent<NavMeshAgent>();
 	}
 	
@@ -29,6 +30,9 @@ public class SampleAgentScript : MonoBehaviour {
 
 				ScoreManager.score += scoreValue;
 				Destroy (gameObject);
+				if ((ScoreManager.score / LevelManager.level) > levelValue){
+					LevelManager.level += 1;
+				}
 
 			}
 		} else

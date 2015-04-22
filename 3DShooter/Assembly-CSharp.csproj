@@ -54,6 +54,7 @@
      <Compile Include="Assets\GradientGUIBars\Script\GUIBarScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\MoreButtonScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\MoveCameraScript.cs" />
+     <Compile Include="Assets\LevelManager.cs" />
      <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\SampleAgentScript.cs" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Camera2DFollow.cs" />
