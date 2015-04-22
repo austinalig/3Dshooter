@@ -8,6 +8,7 @@ public class SampleAgentScript : MonoBehaviour {
 	public int health = 5;
 	private int currenthealth;
 	public GameObject bullet;
+<<<<<<< HEAD
 	public GameObject shells;
 	public int explosionsize = 100;
 	int i = 0;
@@ -18,9 +19,14 @@ public class SampleAgentScript : MonoBehaviour {
 	public bool fire = false;
 	Vector3 randomDirection;
 	public int walkRadius;
+=======
+	public int scoreValue = 10;
+	public int levelValue = 2500;
+
+>>>>>>> origin/master
 	// Use this for initialization
 	void Start () {
-		currenthealth = health;
+		currenthealth = health + LevelManager.level;
 		agent = GetComponent<NavMeshAgent>();
 	}
 	
@@ -61,6 +67,7 @@ public class SampleAgentScript : MonoBehaviour {
 		if (other.tag == bullet.tag) {
 			currenthealth = currenthealth - 1;
 			if (currenthealth <= 0){
+<<<<<<< HEAD
 				x = agent.transform.position;
 				y = agent.transform.rotation;
 				Destroy (gameObject);
@@ -68,5 +75,17 @@ public class SampleAgentScript : MonoBehaviour {
 				Instantiate(shells, x, y);
 			}
 		}
+=======
+
+				ScoreManager.score += scoreValue;
+				Destroy (gameObject);
+				if ((ScoreManager.score / LevelManager.level) > levelValue){
+					LevelManager.level += 1;
+				}
+
+			}
+		} else
+			Debug.Log (other.tag);
+>>>>>>> origin/master
 	}
 }
