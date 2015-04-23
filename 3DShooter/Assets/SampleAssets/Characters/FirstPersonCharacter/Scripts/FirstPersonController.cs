@@ -10,6 +10,10 @@ namespace UnitySampleAssets.Characters.FirstPerson
     {
 
         //////////////////////// exposed privates ///////////////////////
+		public int health = 10;
+		private int currenthealth;
+		public GameObject bullet;
+		public GameObject HealthCap;
         [SerializeField] private bool _isWalking;
         [SerializeField] private float walkSpeed;
         [SerializeField] private float runSpeed;
@@ -48,7 +52,9 @@ namespace UnitySampleAssets.Characters.FirstPerson
 
         // Use this for initialization
         private void Start()
-        {
+		{Debug.Log (currenthealth);
+			currenthealth = health;
+			Debug.Log (currenthealth);
             _characterController = GetComponent<CharacterController>();
             _camera = Camera.main;
             _originalCameraPosition = _camera.transform.localPosition;
@@ -63,6 +69,7 @@ namespace UnitySampleAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+			Debug.Log (currenthealth);
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!_jump)
@@ -162,6 +169,22 @@ namespace UnitySampleAssets.Characters.FirstPerson
             _footstepSounds[0] = GetComponent<AudioSource>().clip;
         }
 
+
+
+		//Damage and Health Capsule info
+		void OnTriggerEnter(Collider other) {
+			if (other.name == "Bullet(Clone)") {
+				currenthealth = currenthealth - 1;
+				if (currenthealth <= -5){
+					//logic for respawning player at origin with full health and score penalty
+					//cannot destroy object, next line causes game to crash.
+					//Destroy (gameObject);
+				}
+			}
+			else if(other.name == HealthCap.name) 
+				currenthealth = currenthealth + 5;
+		}
+	
         private void UpdateCameraPosition(float speed)
         {
             Vector3 newCameraPosition;
