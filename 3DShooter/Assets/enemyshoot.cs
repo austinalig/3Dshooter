@@ -8,10 +8,10 @@ public class enemyshoot : MonoBehaviour {
 	private float nextFire = 0.0F;
 	SampleAgentScript script;
 	GameObject go;
-
+	
 	void Start () {
 	}
-
+	
 	void Update(){
 		GameObject go = GameObject.Find ("Enemy");
 		SampleAgentScript script = go.GetComponent<SampleAgentScript> ();

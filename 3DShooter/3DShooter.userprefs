@@ -1,17 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\SampleAgentScript.cs" Line="58" Column="4" />
       <File FileName="Assets\Shoot.cs" Line="1" Column="1" />
-      <File FileName="Assets\DestroyBullet.cs" Line="13" Column="40" />
-      <File FileName="Assets\DestroyShell.cs" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="175" Column="40" />
-=======
-      <File FileName="Assets\ScoreManager.cs" Line="15" Column="31" />
-      <File FileName="Assets\SampleAgentScript.cs" Line="12" Column="2" />
->>>>>>> origin/master
+      <File FileName="Assets\enemyshoot.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\Documents\GitHub\3Dshooter\3DShooter\Assets\enemyshoot.cs" Line="25" Column="2" />
+      <File FileName="Assets\SampleAgentScript.cs" Line="40" Column="20" />
+      <File FileName="..\..\..\Documents\GitHub\3Dshooter\3DShooter\Assets\SampleAgentScript.cs" Line="83" Column="1" />
+      <File FileName="Assets\SampleAssets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="186" Column="36" />
+      <File FileName="..\..\..\Documents\GitHub\3Dshooter\3DShooter\Assets\SampleAssets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="264" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208a8b0b5423b1142b47ef8ae55f536f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 167300, guid: 2d082edb9e59a1b4581ff3696a6a7bfb, type: 2}
+  enemy: {fileID: 174948, guid: 2d082edb9e59a1b4581ff3696a6a7bfb, type: 2}
 --- !u!136 &13616374
 CapsuleCollider:
   m_ObjectHideFlags: 1
