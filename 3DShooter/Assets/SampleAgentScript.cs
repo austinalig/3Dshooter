@@ -75,8 +75,7 @@ public class SampleAgentScript : MonoBehaviour {
 				}
 				
 			}
-		} else
-			Debug.Log (other.tag);
+		}
 	}
 }
 

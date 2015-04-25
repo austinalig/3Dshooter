@@ -175,7 +175,7 @@ namespace UnitySampleAssets.Characters.FirstPerson
 		
 		//Damage and Health Capsule info
 		void OnTriggerEnter(Collider other) {
-			if (other.name == "Bullet(Clone)") {
+			if (other.tag == bullet.tag) {
 				currenthealth = currenthealth - 1;
 				if (currenthealth <= 0){
 					//logic for respawning player at origin with full health and score penalty
