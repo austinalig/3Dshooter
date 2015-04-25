@@ -20,7 +20,7 @@ public class SampleAgentScript : MonoBehaviour {
 	public int walkRadius;
 	public int scoreValue = 10;
 	public int levelValue = 2500;
-	
+	public float random;
 	
 	// Use this for initialization
 	void Start () {
@@ -30,6 +30,7 @@ public class SampleAgentScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		random = Time.time;
 		Vector3 randomDirection = Random.insideUnitSphere * walkRadius;
 		Vector3 fwd = transform.TransformDirection (Vector3.forward);
 		RaycastHit hit;
@@ -46,10 +47,8 @@ public class SampleAgentScript : MonoBehaviour {
 			}
 		} else if (state == 2) {
 			if ((agent.transform.position - target.position).magnitude < (seekrad + 25)) {
-				randomDirection += transform.position;
-				NavMeshHit store;
-				NavMesh.SamplePosition (randomDirection, out store, walkRadius, 1);
-				Vector3 finalPosition = store.position;
+				randomDirection = (random * Vector3.up) + (random * Vector3.left);
+				agent.SetDestination(randomDirection);
 			} else
 				state = 1;
 		} else if (state == 0) {
