@@ -11,9 +11,11 @@ namespace UnitySampleAssets.Characters.FirstPerson
 		
 		//////////////////////// exposed privates ///////////////////////
 		public int health = 10;
+		public int deathpenalty = 10;
 		private int currenthealth;
 		public GameObject bullet;
 		public GameObject HealthCap;
+		private int death = 0;
 		[SerializeField] private bool _isWalking;
 		[SerializeField] private float walkSpeed;
 		[SerializeField] private float runSpeed;
@@ -181,14 +183,18 @@ namespace UnitySampleAssets.Characters.FirstPerson
 					//logic for respawning player at origin with full health and score penalty
 					//cannot destroy object, next line causes game to crash.
 	//				Destroy (gameObject);
+					if ((death > 0)&&(ScoreManager.score <= 0)){
+						Application.LoadLevel("End Game Scene Level Name");
+					}
 					currenthealth = health;
-					//"whatever score is" - 100;
+					ScoreManager.score = ScoreManager.score - deathpenalty;
+					deathpenalty = deathpenalty *2;
 					_characterController.transform.position = startingpos;
-	
+					death ++;
 				}
 			}
 			else if(other.name == HealthCap.name) 
-				currenthealth = currenthealth + 5;
+				currenthealth = health;
 		}
 		
 		private void UpdateCameraPosition(float speed)

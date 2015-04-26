@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class DestroyShell : MonoBehaviour {
-
+	public int length = 1;
 	// Use this for initialization
 	void Start () {
 	
@@ -11,7 +11,7 @@ public class DestroyShell : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(gameObject.name == "Shell(Clone)"){
-			Destroy(gameObject, 5);
+			Destroy(gameObject, length);
 		}
 	}
 }

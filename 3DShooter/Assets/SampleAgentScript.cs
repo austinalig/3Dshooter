@@ -21,7 +21,8 @@ public class SampleAgentScript : MonoBehaviour {
 	public int scoreValue = 10;
 	public int levelValue = 2500;
 	public float random;
-	
+
+
 	// Use this for initialization
 	void Start () {
 		currenthealth = health + LevelManager.level;
@@ -63,6 +64,7 @@ public class SampleAgentScript : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == bullet.tag) {
 			currenthealth = currenthealth - 1;
+			state = 0;
 			if (currenthealth <= 0){
 				x = agent.transform.position;
 				y = agent.transform.rotation;

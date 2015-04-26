@@ -263,7 +263,8 @@ MonoBehaviour:
   fire: 0
   walkRadius: 0
   scoreValue: 10
-  levelValue: 2500
+  levelValue: 30
+  random: 0
 --- !u!114 &11427064
 MonoBehaviour:
   m_ObjectHideFlags: 1

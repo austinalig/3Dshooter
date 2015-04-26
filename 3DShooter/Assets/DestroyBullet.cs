@@ -3,6 +3,7 @@ using System.Collections;
 
 public class DestroyBullet : MonoBehaviour {
 	public GameObject enemy;
+	public int length = 1;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,7 +12,7 @@ public class DestroyBullet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(gameObject.name == "Bullet(Clone)")
-		{Destroy(gameObject, 5);
+		{Destroy(gameObject, length);
 		}
 	}
 	void OnTriggerEnter(Collider other) {
