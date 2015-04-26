@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seekrad: 100
-  target: {fileID: 499140, guid: 0b8ad7a777a91fe48be9546ecafb65b0, type: 2}
+  target: {fileID: 438994, guid: 13f2224f89be6d44fb7c03fc3598f841, type: 2}
   health: 5
   bullet: {fileID: 168402, guid: f9387c365c0f0de4ea29347bccc6034e, type: 2}
   shells: {fileID: 106288, guid: 64538d8c219da4944a1afbc29008c5c6, type: 2}

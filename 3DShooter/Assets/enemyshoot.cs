@@ -13,9 +13,9 @@ public class enemyshoot : MonoBehaviour {
 	}
 	
 	void Update(){
-		GameObject go = GameObject.Find ("Enemy");
+		GameObject go = GameObject.Find ("Enemy(Clone)");
 		SampleAgentScript script = go.GetComponent<SampleAgentScript> ();
-		if ((script.fire == true) && Time.time > nextFire) {
+		if ((script.fire == true) && (Time.time > nextFire)) {
 			nextFire = Time.time + fireRate;
 			Rigidbody clone = Instantiate(projectile, transform.position, transform.rotation)as Rigidbody;
 			if(clone != null){

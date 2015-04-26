@@ -13,6 +13,7 @@ namespace UnitySampleAssets.Characters.FirstPerson
 		public int health = 10;
 		public int deathpenalty = 10;
 		private int currenthealth;
+		public GameObject SpecialFloor;
 		public GameObject bullet;
 		public GameObject HealthCap;
 		private int death = 0;
@@ -184,7 +185,7 @@ namespace UnitySampleAssets.Characters.FirstPerson
 					//cannot destroy object, next line causes game to crash.
 	//				Destroy (gameObject);
 					if ((death > 0)&&(ScoreManager.score <= 0)){
-						Application.LoadLevel("End Game Scene Level Name");
+						Application.LoadLevel("End Level");
 					}
 					currenthealth = health;
 					ScoreManager.score = ScoreManager.score - deathpenalty;
@@ -195,6 +196,8 @@ namespace UnitySampleAssets.Characters.FirstPerson
 			}
 			else if(other.name == HealthCap.name) 
 				currenthealth = health;
+			else if(other.name == SpecialFloor.name)
+				Application.LoadLevel("Simple level");
 		}
 		
 		private void UpdateCameraPosition(float speed)

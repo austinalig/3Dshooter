@@ -51,6 +51,7 @@
      <Compile Include="Assets\FreegunMove.cs" />
      <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\LevelManager.cs" />
+     <Compile Include="Assets\Leveltrigger.cs" />
      <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\SampleAgentScript.cs" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Camera2DFollow.cs" />
@@ -199,6 +200,7 @@
      <Compile Include="Assets\Shoot.cs" />
      <Compile Include="Assets\WaypointSpawner.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\damage.cs" />
      <Compile Include="Assets\enemyshoot.cs" />
      <None Include="Assets\Animated Emission Shaders\Shader\Animated\Emission\Compiled-Emission.shader" />
      <None Include="Assets\SampleAssets\Effects\Projectors\ProjectorGuidelines.txt" />
