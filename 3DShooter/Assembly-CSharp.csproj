@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DestroyBullet.cs" />
+     <Compile Include="Assets\DestroyEnemyBullet.cs" />
      <Compile Include="Assets\DestroyShell.cs" />
+     <Compile Include="Assets\FinalScore.cs" />
      <Compile Include="Assets\FreegunMove.cs" />
      <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\LevelManager.cs" />
@@ -198,6 +200,7 @@
      <Compile Include="Assets\SampleAssets\Vehicles\RollerBall\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\ScoreManager.cs" />
      <Compile Include="Assets\Shoot.cs" />
+     <Compile Include="Assets\Teleport.cs" />
      <Compile Include="Assets\WaypointSpawner.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\damage.cs" />

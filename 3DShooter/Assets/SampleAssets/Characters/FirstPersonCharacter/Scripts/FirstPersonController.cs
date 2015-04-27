@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnitySampleAssets.CrossPlatformInput;
 using UnitySampleAssets.Utility;
+using UnityEngine.UI;
 
 namespace UnitySampleAssets.Characters.FirstPerson
 {
@@ -10,6 +11,8 @@ namespace UnitySampleAssets.Characters.FirstPerson
 	{
 		
 		//////////////////////// exposed privates ///////////////////////
+		//public GameObject healthslider;
+		public Slider healthBarSlider; 
 		public int health = 10;
 		public int deathpenalty = 10;
 		private int currenthealth;
@@ -53,12 +56,16 @@ namespace UnitySampleAssets.Characters.FirstPerson
 		private float _nextStep = 0f;
 		private bool _jumping = false;
 		Vector3 startingpos;
-		
+		//Slider slide;
 		// Use this for initialization
 		private void Start()
-		{Debug.Log (currenthealth);
+		{
+			healthBarSlider.maxValue = 10;
+			healthBarSlider.minValue = 0;
 			currenthealth = health;
-			Debug.Log (currenthealth);
+			healthBarSlider.value = currenthealth;
+			//GameObject healthslider = GameObject.FindGameObjectWithTag ("Health Bar");
+			//Slider slide = healthslider.GetComponent<slider>;
 			_characterController = GetComponent<CharacterController>();
 			startingpos = _characterController.transform.position;
 			_camera = Camera.main;
@@ -73,8 +80,7 @@ namespace UnitySampleAssets.Characters.FirstPerson
 		
 		// Update is called once per frame
 		private void Update()
-		{
-			Debug.Log (currenthealth);
+		{//slider.value = currenthealth;
 			RotateView();
 			// the jump state needs to read here to make sure it is not missed
 			if (!_jump)
@@ -179,14 +185,17 @@ namespace UnitySampleAssets.Characters.FirstPerson
 		//Damage and Health Capsule info
 		void OnTriggerEnter(Collider other) {
 			if (other.tag == bullet.tag) {
+				healthBarSlider.value -= 1;
 				currenthealth = currenthealth - 1;
 				if (currenthealth <= 0){
 					//logic for respawning player at origin with full health and score penalty
 					//cannot destroy object, next line causes game to crash.
 	//				Destroy (gameObject);
 					if ((death > 0)&&(ScoreManager.score <= 0)){
+						FinalScore.score = ScoreManager.hiddenscore;
 						Application.LoadLevel("End Level");
 					}
+					healthBarSlider.value = 10;
 					currenthealth = health;
 					ScoreManager.score = ScoreManager.score - deathpenalty;
 					deathpenalty = deathpenalty *2;

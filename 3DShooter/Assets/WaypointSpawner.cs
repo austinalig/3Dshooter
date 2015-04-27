@@ -9,7 +9,7 @@ public class WaypointSpawner : MonoBehaviour {
 		public GameObject[] gos;
 		public int i = 0;
 	 	public int maxenemies = 15;
-	    Vector3 center;
+	   public Vector3 center;
 		Vector3 temp;
 		private int mod;
 	void start(){

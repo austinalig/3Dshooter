@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SampleAgentScript : MonoBehaviour {
 	public int seekrad = 20;
-	public Transform target;
+	public GameObject target;
 	NavMeshAgent agent;
 	public int health = 5;
 	private int currenthealth;
@@ -25,6 +25,7 @@ public class SampleAgentScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		target = GameObject.FindGameObjectWithTag ("Player");
 		currenthealth = health + LevelManager.level;
 		agent = GetComponent<NavMeshAgent>();
 	}
@@ -37,23 +38,23 @@ public class SampleAgentScript : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast (transform.position, fwd, out hit))
 			//FSM, 1 = seek, 0 = target aquired, 2 is roam
-			if (hit.collider.name == target.name)
+			if (hit.collider.tag == target.tag)
 				state = 0;
 		if (state == 1) {
-			if ((agent.transform.position - target.position).magnitude > seekrad)
-				agent.SetDestination (target.position);
+			if ((agent.transform.position - target.transform.position).magnitude > seekrad)
+				agent.SetDestination (target.transform.position);
 			else {
 				agent.SetDestination (agent.transform.position);
 				state = 2;
 			}
 		} else if (state == 2) {
-			if ((agent.transform.position - target.position).magnitude < (seekrad + 25)) {
+			if ((agent.transform.position - target.transform.position).magnitude < (seekrad + 25)) {
 				randomDirection = (random * Vector3.up) + (random * Vector3.left);
 				agent.SetDestination(randomDirection);
 			} else
 				state = 1;
 		} else if (state == 0) {
-			agent.SetDestination (target.position);
+			agent.SetDestination (target.transform.position);
 			if (hit.collider.name == target.name)
 				fire = true;
 			else
@@ -72,7 +73,8 @@ public class SampleAgentScript : MonoBehaviour {
 				for (i = 0; i<explosionsize; i++)
 					Instantiate(shells, x, y);
 				ScoreManager.score += scoreValue;
-				if ((ScoreManager.score / LevelManager.level) > levelValue){
+				ScoreManager.hiddenscore += scoreValue;
+				if ((ScoreManager.hiddenscore / LevelManager.level) > levelValue){
 					LevelManager.level += 1;
 				}
 				

@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyBullet : MonoBehaviour {
+public class DestroyEnemyBullet : MonoBehaviour {
 	//public GameObject enemy;
 	public int length = 1;
 	// Use this for initialization
 	void Start () {
 		
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
-		if(gameObject.name == "Bullet(Clone)")
+		if(gameObject.name == "EnemyBullet(Clone)")
 		{Destroy(gameObject, length);
 		}
 	}
