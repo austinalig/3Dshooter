@@ -56,8 +56,9 @@ namespace UnitySampleAssets.Characters.FirstPerson
 		
 		// Use this for initialization
 		private void Start()
-		{
+		{Debug.Log (currenthealth);
 			currenthealth = health;
+			Debug.Log (currenthealth);
 			_characterController = GetComponent<CharacterController>();
 			startingpos = _characterController.transform.position;
 			_camera = Camera.main;
@@ -73,7 +74,7 @@ namespace UnitySampleAssets.Characters.FirstPerson
 		// Update is called once per frame
 		private void Update()
 		{
-
+			Debug.Log (currenthealth);
 			RotateView();
 			// the jump state needs to read here to make sure it is not missed
 			if (!_jump)
